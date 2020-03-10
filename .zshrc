@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnosterzak"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -84,7 +84,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias sshtscc="ssh obotvinnik@tscc-login2.sdsc.edu"
 
 # added by Anaconda3 4.3.1 installer
 #export PATH="/Users/olgabot/anaconda3/bin:$PATH"
@@ -106,14 +105,9 @@ alias fry=sshfry
 
 
 # CZ Biohub vpn
-alias czbvpn="sudo openconnect --user olga.botvinnik https://64.71.0.146 --servercert sha256:0b3c46f6bee2673ee9be9b4227f632fa87b52333949003f4f2d155a70241eacd"
-
-IPYNB_PORT=7788
-alias tunnelfry="ssh -NL $IPYNB_PORT\:localhost:$IPYNB_PORT botvinnik@fry.czbiohub.org  &"
 
 # SSH to NDND from biohub
 # Alias to ndnd
-alias ndnd='ssh olga@ndnd.czbiohub.org'
 
 
 # added by Anaconda3 4.3.1 installer
@@ -142,9 +136,6 @@ export PATH="$PATH:$HOME/go/bin"
 export AWS_SDK_LOAD_CONFIG=1
 
 # Various tunnels
-alias tunnelndndrstudio="ssh -NL 8787:localhost:8787 olga@ndnd.czbiohub.org &"
-alias tunnelfrykeras="ssh -NL 7780:localhost:7780 botvinnik@fry.czbiohub.org  &"
-alias tunnelfryfloydhub="ssh -NL 8877:localhost:8877 botvinnik@fry.czbiohub.org  &"
 
 # Fix video not connected on mac
 alias fixvideo='sudo killall VDCAssistant'
@@ -162,16 +153,16 @@ export GOPATH=$HOME/gocode GOROOT=$HOME/go
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/olga/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/olga/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/olga/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/olga/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# __conda_setup="$('/home/olga/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/olga/miniconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/olga/miniconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/olga/miniconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
 
