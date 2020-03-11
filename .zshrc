@@ -51,7 +51,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx python aws screen terminalapp common-aliases fast-syntax-highlighting zsh-autosuggestions)
+plugins=(git python aws screen common-aliases fast-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -150,19 +150,20 @@ alias ll="ls -lha --group"
 
 # Set GO paths
 export GOPATH=$HOME/gocode GOROOT=$HOME/go
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/olga/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/olga/miniconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/olga/miniconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/olga/miniconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
+__conda_setup="$('/home/phoenix/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/phoenix/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/phoenix/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/phoenix/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 # <<< conda initialize <<<
+
+# export PATH=/home/phoenix/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/bin
 
