@@ -10,7 +10,11 @@ setup_ubuntu:
 
 setup_zsh_ubuntu:
 	wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-	sh install.sh
+
+clone-oh-my-zsh:
+	git clone git@github.com:ohmyzsh/ohmyzsh.git
+	mv ohmyzsh .oh-my-zsh
+	zsh
 
 setup_mac:
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
